@@ -4,39 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        * {
-            margin: 0%;
-            padding: 0%;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .clock-container {
-            display: flex;
-            justify-content: space-around;
-            margin: 100px 50px;
-        }
-
-        .clock {
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            border: 2px solid #000;
-            display: flex;
-            font-size: 30px;
-            justify-content: center;
-            align-items: center;
-            background-color: #022546;
-            color: white;
-            border: none;
-            text-align: center;
-            line-height: 40px;
-            position: relative;
-        }
-    </style>
+    <title>Clock Project</title>
 </head>
 
 <body>
@@ -45,38 +13,6 @@
         <div class="min clock"></div>
         <div class="sec clock"></div>
     </div>
-
-
-
-    <script>
-        let h = document.querySelector(".hours");
-        let m = document.querySelector(".min");
-        let s = document.querySelector(".sec");
-
-
-        function displayHours() {
-            let clock = new Date();
-            let hour = clock.getHours();
-            h.innerHTML = `${hour}<br>Hours`;
-        }
-
-        function displayMinutes() {
-            let clock = new Date();
-            let min = clock.getMinutes();
-            m.innerHTML = `${min}<br>Minutes`;
-            setInterval(displayMinutes, 1000);
-        }
-
-        function displaySeconds() {
-            let clock = new Date();
-            let sec = clock.getSeconds();
-            s.innerHTML = `${sec}<br>Seconds`;
-                setInterval(displaySeconds, 1000);
-        }
-        displayHours();
-        displayMinutes();
-        displaySeconds();
-    </script>
 </body>
 
 </html>
